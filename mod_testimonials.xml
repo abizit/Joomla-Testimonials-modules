@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Post from Category</name>
+	<author>Samundra Shrestha</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2013 www.samundra.com.np</copyright>
+	<license>GNU/GPL v1.0</license>
+	<authorEmail>samundra.shr@gmail.com</authorEmail>
+	<authorUrl>www.samundra.com.np</authorUrl>
+	<version>1.0.0</version>
+	<description><![CDATA[
+	This module displays the post from the selected category of articles.
+	]]></description>
+	
+	<files>
+		<filename module="mod_testimonials">mod_testimonials.php</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_testimonials.xml</filename>
+	</files>
+	
+    <languages>
+		<language tag="en-GB">en-GB.mod_testimonials.ini</language>
+	</languages>
+    
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="MOD_TESTIMONIALS_FIELDSET_BASIC">
+				
+				<field 
+                  name="catid" 
+                  type="category" 
+                  extension="com_content" 
+                  multiple="true" 
+                  size="10" 
+                  default="" 
+                  label="MOD_TESTIMONIALS_CATEGORY_LABEL" 
+                  description="MOD_TESTIMONIALS_CATEGORY_DESC" >
+				  <option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+                
+				<field 
+                  name="s_title" 
+                  type="text" 
+                  default="Testimonials" 
+                  label="MOD_TESTIMONIALS_TITLE_LABEL" 
+                  description="MOD_TESTIMONIALS_TITLE_DESC">
+                </field>
+                
+				<field 
+                  name="s_suffix" 
+                  type="text" 
+                  default="_sfx" 
+                  label="MOD_TESTIMONIALS_SUFFIX_LABEL" 
+                  description="MOD_TESTIMONIALS_SUFFIX_DESC">
+                </field>
+				
+                <field 
+                  name="s_style" 
+                  type="list" 
+                  default="1" 
+                  label="MOD_TESTIMONIALS_STYLE_LABEL" 
+                  description="MOD_TESTIMONIALS_STYLE_DESC" >
+				  <option value="1">Single post rotating</option>
+				  <option value="2">Multiple post</option>
+				</field>
+                
+                <field 
+                  name="s_viewall" 
+                  type="text" 
+                  default="" 
+                  label="MOD_TESTIMONIALS_VIEWALL_LABEL" 
+                  description="MOD_TESTIMONIALS_VIEWALL_DESC">
+                </field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
